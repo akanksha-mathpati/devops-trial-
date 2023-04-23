@@ -45,3 +45,23 @@ upstream, see 'push.autoSetupRemote' in 'git help config'.
 amath@LAPTOP-HI6TV43M MINGW64 ~/devops/practical (main)
 $ git push -u origin main
 $ git pull -u origin main 
+
+
+
+Docker file 
+php--- <html>
+    <?php echo "Hello world from php container "?>
+</html>
+
+
+docker 
+FROM php
+COPY ./index.php ./
+EXPOSE 3000
+CMD ["php","-S","0.0.0.0:3000"]
+
+Exp 6 
+Build an image from a Dockerfile
+PS D:\Users\Admin\Desktop\docker> docker build . -t qwrt/php
+[+] Building 1.7s (7/7) FINISHED
+ => [internal] load build definition from Dockerfile                  
